@@ -1,6 +1,8 @@
 #!/bin/bash
 
-echo '********************************************' >> /home/pi/logs/updatelog.txt
-date >> /home/pi/logs/updatelog.txt
+$LOGFILE=/home/pi/logs/updatelog.txt
 
-apt-get update && apt-get upgrade -y >> /home/pi/logs/updatelog.txt
+echo '********************************************' >> $LOGFILE
+date >> $LOGFILE
+
+apt-get update && apt-get upgrade -y >> $LOGFILE
